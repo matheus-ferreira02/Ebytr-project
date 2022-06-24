@@ -1,0 +1,20 @@
+{
+  "name": "ebytr-backend",
+  "version": "1.0.0",
+  "description": "Projeto do processo seletivo Ebytr",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matheus-ferreira02/Ebytr-backend.git"
+  },
+  "keywords": ["Ebytr"],
+  "author": "Matheus Ferreira",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/matheus-ferreira02/Ebytr-backend/issues"
+  },
+  "homepage": "https://github.com/matheus-ferreira02/Ebytr-backend#readme"
+}
