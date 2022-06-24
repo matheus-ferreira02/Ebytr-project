@@ -10,11 +10,17 @@
     "type": "git",
     "url": "git+https://github.com/matheus-ferreira02/Ebytr-backend.git"
   },
-  "keywords": ["Ebytr"],
+  "keywords": [
+    "Ebytr"
+  ],
   "author": "Matheus Ferreira",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/matheus-ferreira02/Ebytr-backend/issues"
   },
-  "homepage": "https://github.com/matheus-ferreira02/Ebytr-backend#readme"
+  "homepage": "https://github.com/matheus-ferreira02/Ebytr-backend#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.18",
+    "sequelize-cli": "^6.4.1"
+  }
 }
