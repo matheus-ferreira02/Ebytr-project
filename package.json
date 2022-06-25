@@ -1,0 +1,38 @@
+{
+  "name": "ebytr-backend",
+  "version": "1.0.0",
+  "description": "Projeto do processo seletivo Ebytr",
+  "main": "server.js",
+  "scripts": {
+    "test": "mocha ./tests/**/*.test.js",
+    "dev": "nodemon src/server.js",
+    "start": "node src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matheus-ferreira02/Ebytr-backend.git"
+  },
+  "keywords": [
+    "Ebytr"
+  ],
+  "author": "Matheus Ferreira",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/matheus-ferreira02/Ebytr-backend/issues"
+  },
+  "homepage": "https://github.com/matheus-ferreira02/Ebytr-backend#readme",
+  "devDependencies": {
+    "chai": "^4.3.6",
+    "eslint": "^8.18.0",
+    "mocha": "^10.0.0",
+    "nodemon": "^2.0.18",
+    "sequelize-cli": "^6.4.1",
+    "sinon": "^14.0.0"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.21.1"
+  }
+}
