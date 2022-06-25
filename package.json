@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/matheus-ferreira02/Ebytr-backend#readme",
   "devDependencies": {
+    "eslint": "^8.18.0",
     "nodemon": "^2.0.18",
     "sequelize-cli": "^6.4.1"
   }
