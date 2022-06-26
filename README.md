@@ -34,11 +34,27 @@ Aqui você vai encontrar os detalhes de como colocar no ar a API da Ebytr e tamb
 
 <br>
 
-  > Após isso execute o seguinte comando para iniciar os serviços da API e do banco de dados: `docker-compose up -d`
+  > Após isso execute o seguinte comando para iniciar os serviços da API e do banco de dados: `docker-compose up -d`.
 
-  - Lembre-se de parar o Mysql se estiver usando localmente na porta `3306`, e certifique-se que não tem nenhuma outra aplicação rodando na porta `3000`
+  - Lembre-se de parar o Mysql se estiver usando localmente na porta `3306`, e certifique-se que não tem nenhuma outra aplicação rodando na porta `3000`.
 
-  - Esses serviços irão inicializar um container chamado `api_ebytr` e outro chamado `database_ebytr`
+  - Esses serviços irão inicializar um container chamado `api_ebytr` e outro chamado `database_ebytr`.
+
+  - A partir daí voce pode rodar o container chamado `api_ebytr` para colocar a API no ar.
+
+  > Use o comando `docker exec -it api_ebytr bash`.
+
+  - Ele te dará acesso ao terminal interativo do container criado pelo docker-compose.
+
+  - Instale as dependências.
+
+  > Use o comando `npm install`.
+
+  - Agora coloque a API no ar.
+
+  > Use o comando `npm start`
+
+  Se tudo ocorreu bem, irá aparecer no terminal a seguinte mensagem `Online na porta 3000`. Tudo pronto, agora vamos colocar o front-end no ar, basta seguir os passos desse repositório: <a href="#">Link</a>
 </details>
 
 </br>
