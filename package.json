@@ -4,11 +4,12 @@
   "description": "Projeto do processo seletivo Ebytr",
   "main": "src/api/server.js",
   "scripts": {
-    "test": "mocha ./tests/**/*.test.js",
-    "test:coverage": "nyc --include='src/**/*.js' npm run test",
+    "test": "mocha ./src/tests/**/*.test.js --exit",
+    "test:coverage": "nyc --all npm run test",
     "dev": "nodemon src/api/server.js",
     "start": "node src/api/server.js",
-    "prestart": "npx sequelize db:create && npx sequelize db:migrate && npx sequelize db:seed:all"
+    "prestart": "npx sequelize db:create && npx sequelize db:migrate && npx sequelize db:seed:all",
+    "lint": "eslint .eslintrc.json . --ext .js"
   },
   "repository": {
     "type": "git",
