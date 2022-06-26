@@ -3,15 +3,18 @@ version: "3.0"
 services:
   api:
     image: node:16
-    ports:
-      - 3000:3000
     container_name: api_ebytr
     working_dir: /app
     volumes:
       - ./:/app
     depends_on:
       - database
+    tty: true
+    stdin_open: true
+    command: bash
     restart: always
+    ports:
+      - 3000:3000
     environment:
       DB_USER: root
       DB_PASS: password
