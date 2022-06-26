@@ -27,6 +27,23 @@ Aqui você vai encontrar os detalhes de como colocar no ar a API da Ebytr e tamb
 </br>
 
 <details>
+  <summary>🐳 Executando a API</summary></br>
+  Neste projeto, foi utilizado o Docker para executar a aplicação.
+  Então certifique-se de que o Docker esteja instalado em sua máquina<br>
+  <a href="https://docs.docker.com/engine/install/ubuntu/" target="_blank">Instalação do docker</a><br>
+
+<br>
+
+  > Após isso execute o seguinte comando para iniciar os serviços da API e do banco de dados: `docker-compose up -d`
+
+  - Lembre-se de parar o Mysql se estiver usando localmente na porta `3306`, e certifique-se que não tem nenhuma outra aplicação rodando na porta `3000`
+
+  - Esses serviços irão inicializar um container chamado `api_ebytr` e outro chamado `database_ebytr`
+</details>
+
+</br>
+
+<details>
   <summary>📄 Comandos</summary></br>
   O projeto já vem com alguns comandos específicos caso queira executar certas tarefas:</br>
 
