@@ -8,8 +8,7 @@
     "test:coverage": "nyc --all npm run test",
     "dev": "nodemon src/api/server.js",
     "start": "node src/api/server.js",
-    "prestart": "npx sequelize db:create && npx sequelize db:migrate && npx sequelize db:seed:all",
-    "lint": "eslint .eslintrc.json . --ext .js"
+    "prestart": "npx sequelize db:create && npx sequelize db:migrate && npx sequelize db:seed:all"
   },
   "repository": {
     "type": "git",
