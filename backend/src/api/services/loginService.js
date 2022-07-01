@@ -7,8 +7,8 @@ const signIn = async ({ email, password }) => {
   const token = jwt.generateToken(user);
 
   return token;
-}
+};
 
 module.exports = {
   signIn
-}
+};

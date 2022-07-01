@@ -1,4 +1,4 @@
-const loginService = require('../../api/services/loginService');;
+const loginService = require('../../api/services/loginService');
 const { userMock } = require('../mocks/users');
 const { User } = require('../../database/models');
 const jwt = require('../../utils/jwt');

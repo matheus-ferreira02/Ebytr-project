@@ -7,16 +7,16 @@ const generateToken = (payload) => {
   const jwtConfig = {
     expiresIn: '7d',
     algorithm: 'HS256'
-  }
+  };
 
   const token = jwt.sign({ data: payload }, JWT_SECRET, jwtConfig);
 
   return token;
-}
+};
 
 const decodeToken = (token) => jwt.verify(token, JWT_SECRET).data;
 
 module.exports = {
   generateToken,
   decodeToken
-}
+};
