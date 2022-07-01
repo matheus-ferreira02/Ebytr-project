@@ -14,7 +14,7 @@ const generateToken = (payload) => {
   return token;
 }
 
-const decodeToken = (token) => jwt.verify(token, JWT_SECRET);
+const decodeToken = (token) => jwt.verify(token, JWT_SECRET).data;
 
 module.exports = {
   generateToken,

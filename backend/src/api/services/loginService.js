@@ -1,16 +1,14 @@
-const generateToken = require('../../utils/generateToken');
+const jwt = require('../../utils/jwt');
 const { User } = require('../../database/models');
-const teste = require('./teste')
 
 const signIn = async ({ email, password }) => {
   const user = await User.findOne({ email, password });
 
-  const token = generateToken(user);
+  const token = jwt.generateToken(user);
 
   return token;
 }
 
 module.exports = {
-  signIn,
-  teste
+  signIn
 }

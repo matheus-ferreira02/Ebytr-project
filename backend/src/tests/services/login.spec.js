@@ -19,6 +19,6 @@ describe('Testes da camada "services" de Login: ', () => {
 
     const decodedToken = jwt.decodeToken(response);
 
-    expect(decodedToken).toEqual({ id: userMock.email, email: userMock.email });
+    expect(decodedToken).toEqual({ id: userMock.id, email: userMock.email });
   });
 });
