@@ -2,7 +2,6 @@ const loginService = require('../../api/services/login');
 const { userMock } = require('../mocks/users');
 const { User } = require('../../database/models');
 const jwt = require('../../utils/jwt');
-const createObjError = require('../../utils/createObjError');
 
 describe('Testes da camada "services" de Login: ', () => {
   describe('Em casos de sucesso, testa se', () => {
