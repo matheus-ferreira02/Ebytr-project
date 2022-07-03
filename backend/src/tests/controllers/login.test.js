@@ -8,6 +8,10 @@ describe('Testes da camada "controllers" de Login:', () => {
     loginService.signIn = jest.fn().mockResolvedValue(tokenMock());
   });
 
+  afterEach(() => {
+    loginService.signIn.mockReset();
+  });
+
   it('Testa se retorna uma requisição com o status "200"', async () => {
     const { res } = getMockRes();
     const req = getMockReq({ body: { email: "matheus@gmail.com", password: "123456" } });
