@@ -40,7 +40,7 @@ Aqui você vai encontrar os detalhes de como colocar no ar a API da Ebytr e tamb
 
   - Esses serviços irão inicializar um container chamado `api_ebytr` e outro chamado `database_ebytr`.
 
-  - A partir daí voce pode rodar o container chamado `api_ebytr` para colocar a API no ar.
+    - A partir daí voce pode rodar o container chamado `api_ebytr` para colocar a API no ar.
 
   > Use o comando `docker exec -it api_ebytr bash`.
 
@@ -72,4 +72,62 @@ Aqui você vai encontrar os detalhes de como colocar no ar a API da Ebytr e tamb
 </br>
 
   > Execute `npm test` para executar todos os testes.
+</details>
+
+</br>
+
+## Rotas
+<hr>
+
+<details>
+  <summary>Login</summary></br>
+  Para fazer login com um usuário, basta fazer uma requisição na rota /post, passando o seguinte corpo na requisição:
+
+~~~json
+  {
+    "email": "teste@gmail.com",
+    "password": "123456"
+  }
+~~~
+
+  Esse endpoint retorná um token de acesso que expira em 7 dias
+
+~~~json
+  {
+    "token": "dadawawfwegeteawerjegwwher....."
+  }
+~~~
+
+  Caso faça uma requisição sem o campo "email", a API responserá com o status `400` e com o json:
+
+~~~json
+  {
+    "message": "\"email\" is required"
+  }
+~~~
+
+  Caso faça uma requisição com o formato de "email" inválido, a API responserá com o status `400` e com o json:
+
+~~~json
+  {
+    "message": "\"email\" must be a valid email"
+  }
+~~~
+
+  Caso faça uma requisição sem o campo "password", a API responserá com o status `400` e com o json::
+
+~~~json
+  {
+    "message": "\"password\" is required"
+  }
+~~~
+
+  Caso faça uma requisição com a senha menor que 6 caracteres, a API responserá com o status `400` e com o json:
+
+~~~json
+  {
+    "message": "\"password\" length must be at least 6 characters long"
+  }
+~~~
+
 </details>

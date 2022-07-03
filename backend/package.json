@@ -4,11 +4,12 @@
   "description": "Projeto do processo seletivo Ebytr",
   "main": "src/api/server.js",
   "scripts": {
-    "test": "mocha ./src/tests/**/*.test.js --exit",
+    "test": "jest --coverage",
     "test:coverage": "nyc --all npm run test",
     "dev": "nodemon src/api/server.js",
     "start": "node src/api/server.js",
-    "prestart": "npx sequelize db:create && npx sequelize db:migrate && npx sequelize db:seed:all"
+    "prestart": "npx sequelize db:create && npx sequelize db:migrate && npx sequelize db:seed:all",
+    "lint": "eslint"
   },
   "repository": {
     "type": "git",
@@ -24,17 +25,19 @@
   },
   "homepage": "https://github.com/matheus-ferreira02/Ebytr-backend#readme",
   "devDependencies": {
-    "chai": "^4.3.6",
+    "@jest-mock/express": "^2.0.1",
     "eslint": "^8.18.0",
-    "mocha": "^10.0.0",
+    "jest": "^28.1.2",
     "nodemon": "^2.0.18",
     "nyc": "^15.1.0",
-    "sequelize-cli": "^6.4.1",
-    "sinon": "^14.0.0"
+    "sequelize-cli": "^6.4.1"
   },
   "dependencies": {
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
+    "express-rescue": "^1.1.31",
+    "joi": "^17.6.0",
+    "jsonwebtoken": "^8.5.1",
     "mysql2": "^2.3.3",
     "sequelize": "^6.21.1"
   }
