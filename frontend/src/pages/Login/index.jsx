@@ -1,13 +1,28 @@
 import { useState, useRef } from 'react';
+import requestAPI from '../../utils/requestApi';
 
 function Login() {
   const emailRef = useRef();
   const passwordRef = useRef();
   const [disabledSubmit, setDisabledSubmit] = useState(true);
+  const BASE_URL = import.meta.env.VITE_BASE_URL;
 
-  const signIn = (event) => {
+  const signIn = async (event) => {
     event.preventDefault();
-    console.log('ola');
+    
+    const options = {
+      method: 'POST',
+      url: `${BASE_URL}/login`,
+      data: {
+        email: emailRef.current.value,
+        password: passwordRef.current.value
+      }
+    };
+
+    const response = await requestAPI(options);
+
+    if (response.error) console.log(response);
+    else console.log(response);
   };
 
   const verifyFields = () => {
@@ -18,7 +33,6 @@ function Login() {
 
     const isValidEmail = regexEmail.test(email);
     const isValidPassword = password.length >= 6;
-
     const isValidFields = [isValidEmail, isValidPassword];
 
     setDisabledSubmit(!isValidFields.every((validField) => validField));
