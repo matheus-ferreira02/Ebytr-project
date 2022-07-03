@@ -5,7 +5,7 @@ export default async (options) => {
     const { data } = await axios(options);
     return { data };
   } catch (err) {
-    const { data } = err.response;
-    return { data, error: true };
+    const { data, status } = err.response;
+    return { data, status, error: true };
   }
 };
