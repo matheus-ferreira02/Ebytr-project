@@ -6,7 +6,7 @@ const jwt = require('../../utils/jwt');
 routes.use('/login', loginRoutes);
 routes.use('/tasks', taskRoutes);
 
-routes.use('/auth', (req, res) => {
+routes.get('/auth', (req, res) => {
   const { authorization } = req.headers;
 
   if (!authorization) return res.status(401).json({ message: 'Token is required' });
