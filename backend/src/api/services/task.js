@@ -13,7 +13,7 @@ const getTasksByUserId = async (userId) => {
 };
 
 const create = async ({title, content, userId }) => {
-  const response = Task.create({ title, content, userId });
+  const response = Task.create({ title, content, userId, status: 'pendente' });
 
   return response;
 };

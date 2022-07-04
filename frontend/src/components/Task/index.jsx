@@ -4,11 +4,16 @@ function Task({ task }) {
   const formattedDate = `${date.getDate()}/${date.getMonth()}/${date.getFullYear()}`;
 
   return (
-    <section style={ { border: '5px solid black' } }>
+    <section style={ {
+      border: '3px solid black',
+      borderRadius: '7px',
+      padding: '20px',
+      margin: '10px 0'
+    } }>
       <h1>{ title }</h1>
-      <p>{ content }</p>
-      <p>{ formattedDate }</p>
-      <p>{ status }</p>
+      <p>Descrição: { content }</p>
+      <p>Data de criação: { formattedDate }</p>
+      <p>status: { status }</p>
     </section>
   );
 }

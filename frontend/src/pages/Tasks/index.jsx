@@ -37,7 +37,10 @@ function Tasks() {
   }, []);
 
   return (
-    <section>
+    <section style={{
+      width: '800px',
+      margin: 'auto'
+    }}>
       { tasks.map((task) => <Task
         key={ task.id }
         task={ task }
