@@ -12,6 +12,13 @@ const getTasksByUserId = async (userId) => {
   return response;
 };
 
+const create = async ({title, content, userId }) => {
+  const response = Task.create({ title, content, userId });
+
+  return response;
+};
+
 module.exports = {
-  getTasksByUserId
+  getTasksByUserId,
+  create
 };
