@@ -37,7 +37,12 @@ function Tasks() {
 
   return (
     <section>
-      { tasks.map((task) => <Task key={ task.id } title={ task.title } content={ task.content } /> )}
+      { tasks.map((task) => <Task
+        key={ task.id }
+        title={ task.title }
+        content={ task.content }
+        createdAt={ task.createdAt }
+      /> )}
     </section>
   );
 }
