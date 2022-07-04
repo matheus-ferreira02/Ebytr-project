@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import requestApi from '../../utils/requestApi';
 import Task from '../../components/Task';
+import CreateTask from '../../components/createTask';
 
 function Tasks() {
   const navigate = useNavigate();
@@ -39,10 +40,10 @@ function Tasks() {
     <section>
       { tasks.map((task) => <Task
         key={ task.id }
-        title={ task.title }
-        content={ task.content }
-        createdAt={ task.createdAt }
+        task={ task }
       /> )}
+
+      <CreateTask />
     </section>
   );
 }
