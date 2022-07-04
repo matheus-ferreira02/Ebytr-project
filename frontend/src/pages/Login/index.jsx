@@ -54,26 +54,74 @@ function Login() {
   };
 
   return (
-    <section>
-      <form onSubmit={ signIn }>
+    <section style={{
+      width: '100%',
+      margin: 'auto',
+      height: '100vh',
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center'
+    }}>
+      <form style={{
+        background: '#B0C4D4',
+        borderRadius: '10px',
+        height: '35%',
+        width: '30%',
+        display: 'flex',
+        flexDirection: 'column',
+        padding: '20px'
+      }}onSubmit={ signIn }>
         <input
+          style={{
+            height: '50px',
+            fontSize: '18px',
+            padding: '10px',
+            margin: '20px 0',
+            borderRadius: '5px'
+          }}
           onChange={ verifyFields }
           type="text" placeholder='Email'
           ref={ emailRef }
         />
 
         <input
+          style={{
+            height: '50px',
+            fontSize: '18px',
+            padding: '10px',
+            margin: '20px 0',
+            borderRadius: '5px',
+            border: '1px solid blue',
+          }}
           onChange={ verifyFields }
-          type="text"
+          type="password"
           placeholder='Senha'
           ref={ passwordRef }
         />
 
-        <button type="submit" disabled={ disabledSubmit }>Entrar</button>
-      </form>
+        <button style={{
+          border: 'none',
+          background: disabledSubmit ? '#C7F0C4' : '#019A36',
+          width: '30%',
+          padding: '15px',
+          fontSize: '18px',
+          margin: 'auto',
+          cursor: disabledSubmit ? 'not-allowed' : 'pointer'
+        }} type="submit" disabled={ disabledSubmit }>Entrar</button>
 
-      { userNotFound && <p>Usuário ou senha incorretas</p> }
-      { internalError && <p>Erro do servidor, tente novamente mais tarde</p> }
+        { userNotFound && <p style={{
+          background: '#B0C4D4',
+          textAlign: 'center',
+          margin: '10px',
+          color: 'red'
+        }}>Usuário ou senha incorretas</p> }
+        { internalError && <p style={{
+          background: '#B0C4D4',
+          textAlign: 'center',
+          margin: '10px',
+          color: 'red'
+        }}>Erro do servidor, tente novamente mais tarde</p> }
+      </form>
     </section>
   );
 }
