@@ -5,7 +5,6 @@ module.exports = (sequelize, DataTypes) => {
     status: DataTypes.STRING,
     userId: DataTypes.INTEGER,
   }, {
-    timestamps: false,
     underscored: true,
     tableName: 'Tasks'
   });

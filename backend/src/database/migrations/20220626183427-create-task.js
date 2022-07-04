@@ -15,7 +15,7 @@ module.exports = {
         type: Sequelize.STRING(300)
       },
       status: {
-        type: Sequelize.STRING(10)
+        type: Sequelize.STRING(15)
       },
       userId: {
         type: Sequelize.INTEGER,
