@@ -6,7 +6,8 @@ module.exports = (sequelize, DataTypes) => {
     userId: DataTypes.INTEGER,
   }, {
     timestamps: false,
-    underscored: true
+    underscored: true,
+    tableName: 'Tasks'
   });
 
   Task.associate = ({ User }) => {
