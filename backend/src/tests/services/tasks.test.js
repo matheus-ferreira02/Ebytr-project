@@ -1,6 +1,6 @@
 const { Task } = require('../../database/models');
 const taskService = require('../../api/services/task');
-const tasksMock = require('../mocks/tasks')
+const tasksMock = require('../mocks/tasks');
 
 describe('Testes da camada "services" de Tasks: ', () => { 
   describe('Em casos de sucesso, testa se', () => {
