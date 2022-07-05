@@ -185,3 +185,10 @@ Caso faça uma requisição sem o titulo, a API responserá com o status `400` e
   }
 ~~~
 </details>
+
+<details>
+  <summary>DELETE Tasks</summary></br>
+  Para deletar uma task, basta fazer uma requisição para o endpoint DELETE /task/:id com o token:
+
+  Esse endpoint não retornará nada no corpo da resposta
+</details>

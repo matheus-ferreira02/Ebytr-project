@@ -20,7 +20,7 @@
   <summary>Tasks</summary></br>
     Ao entrar na página, o usuário encontrará as tarefas pertencentes ao usuário
     
-- O usuário pode ver e criar tarefas
+- O usuário pode ver, criar e deletar tarefas
 
 - Caso o usuário tente entrar na página sem o token, ele será redirecionado para o login
 </details>
