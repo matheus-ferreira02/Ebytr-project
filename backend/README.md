@@ -81,7 +81,7 @@ Aqui você vai encontrar os detalhes de como colocar no ar a API da Ebytr e tamb
 
 <details>
   <summary>Login</summary></br>
-  Para fazer login com um usuário, basta fazer uma requisição na rota /post, passando o seguinte corpo na requisição:
+  Para fazer login com um usuário, basta fazer uma requisição na rota /login, passando o seguinte corpo na requisição:
 
 ~~~json
   {
@@ -130,4 +130,58 @@ Aqui você vai encontrar os detalhes de como colocar no ar a API da Ebytr e tamb
   }
 ~~~
 
+</details>
+
+
+<details>
+  <summary>GET Tasks</summary></br>
+  Para pegar as tasks, basta fazer uma requisição para o endpoint GET /task com o token:
+
+  Esse endpoint retorná todos as tarefas relacionadas a cada usuário de acordo com o token
+</details>
+
+<details>
+  <summary>POST Tasks</summary></br>
+  Para pegar criar uma task, basta fazer uma requisição para o endpoint POST /task com o token, passando o seguinte corpo na requisição:
+
+
+~~~json
+{
+  "title": "Nova tarefa",
+  "content": "Descrição da tarefa"
+}
+~~~
+
+Esse endpoint retorná a task criada.
+
+
+Caso faça uma requisição sem o titulo, a API responserá com o status `400` e com o json:
+~~~json
+  {
+    "message": "\"title\" is required"
+  }
+~~~
+
+  Caso faça uma requisição sem o conteúdo, a API responserá com o status `400` e com o json:
+~~~json
+  {
+    "message": "\"content\" is required"
+  }
+~~~
+
+  Caso faça uma requisição com o título menor que 5 caracteres, a API responserá com o status `400` e com o json:
+
+~~~json
+  {
+    "message": "\"title\" length must be at least 5 characters long"
+  }
+~~~
+
+  Caso faça uma requisição com o conteúdo menor que 5 caracteres, a API responserá com o status `400` e com o json:
+
+~~~json
+  {
+    "message": "\"content\" length must be at least 5 characters long"
+  }
+~~~
 </details>
