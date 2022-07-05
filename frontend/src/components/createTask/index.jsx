@@ -28,7 +28,6 @@ function createTask() {
     };
 
     const response = await requestApi(options);
-    console.log(response);
 
     if (response.error) console.log('Algo deu errado');
     else window.location.reload();

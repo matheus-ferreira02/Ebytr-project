@@ -2,3 +2,13 @@ h1, p {
   background: #141514;
   color: rgb(167, 165, 165);
 }
+
+.btn-delete {
+  all: unset;
+  margin-top: 15px;
+  background: #BA1F33;
+  padding: 5px;
+  color: black;
+  border-radius: 5px;
+  cursor: pointer;
+}
