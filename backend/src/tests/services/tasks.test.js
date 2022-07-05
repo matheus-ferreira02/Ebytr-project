@@ -18,7 +18,13 @@ describe('Testes da camada "services" de Tasks: ', () => {
 
     it('a função "getTasksByUserId" é chamada com o parâmetro correto', async () => {
       await taskService.getTasksByUserId(1);
-      const parameterQuery = { where: { userId: 1 } }
+      const parameterQuery = { where: { userId: 1 },
+        order: [
+          ['title', 'ASC'],
+          ['createdAt', 'ASC'],
+          ['status', 'ASC'],
+        ]
+      };
       expect(Task.findAll).toBeCalledWith(parameterQuery);
     });
 

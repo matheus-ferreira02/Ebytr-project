@@ -19,7 +19,7 @@ describe('Testes da camada "controller" de Tasks', () => {
 
     it('uma resposta com o status "200"', async () => {
       const { res } = getMockRes();
-      const req = getMockReq({ params: 1 });
+      const req = getMockReq({ params: 1, user: { id: 1 } });
       
       await taskController.getTasksByUserId(req, res);
   
@@ -28,7 +28,7 @@ describe('Testes da camada "controller" de Tasks', () => {
 
     it('uma "json" com as tarefas', async () => {
       const { res } = getMockRes();
-      const req = getMockReq({ params: 1 });
+      const req = getMockReq({ params: 1, user: { id: 1 } });
       
       await taskController.getTasksByUserId(req, res);
   
