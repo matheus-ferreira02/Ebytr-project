@@ -1,3 +1,5 @@
+import './style.css';
+
 function Task({ task }) {
   const { title, content, createdAt, status } = task;
   const date = new Date(createdAt);
@@ -5,10 +7,10 @@ function Task({ task }) {
 
   return (
     <section style={ {
-      border: '3px solid black',
       borderRadius: '7px',
       padding: '20px',
-      margin: '10px 0'
+      margin: '10px 0',
+      background: '#141514'
     } }>
       <h1>{ title }</h1>
       <p>Descrição: { content }</p>

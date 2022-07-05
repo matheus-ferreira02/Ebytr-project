@@ -63,7 +63,7 @@ function Login() {
       alignItems: 'center'
     }}>
       <form style={{
-        background: '#B0C4D4',
+        background: '#141514',
         borderRadius: '10px',
         height: '35%',
         width: '30%',
@@ -76,8 +76,7 @@ function Login() {
             height: '50px',
             fontSize: '18px',
             padding: '10px',
-            margin: '20px 0',
-            borderRadius: '5px'
+            margin: '20px 0'
           }}
           onChange={ verifyFields }
           type="text" placeholder='Email'
@@ -89,9 +88,7 @@ function Login() {
             height: '50px',
             fontSize: '18px',
             padding: '10px',
-            margin: '20px 0',
-            borderRadius: '5px',
-            border: '1px solid blue',
+            margin: '20px 0'
           }}
           onChange={ verifyFields }
           type="password"
@@ -101,7 +98,7 @@ function Login() {
 
         <button style={{
           border: 'none',
-          background: disabledSubmit ? '#C7F0C4' : '#019A36',
+          background: disabledSubmit ? '#F1FAEE' : '#60935D',
           width: '30%',
           padding: '15px',
           fontSize: '18px',
@@ -110,13 +107,13 @@ function Login() {
         }} type="submit" disabled={ disabledSubmit }>Entrar</button>
 
         { userNotFound && <p style={{
-          background: '#B0C4D4',
+          background: '#141514',
           textAlign: 'center',
           margin: '10px',
           color: 'red'
         }}>Usuário ou senha incorretas</p> }
         { internalError && <p style={{
-          background: '#B0C4D4',
+          background: '#141514',
           textAlign: 'center',
           margin: '10px',
           color: 'red'

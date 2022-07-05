@@ -53,7 +53,9 @@ function createTask() {
               all: 'unset',
               padding: '10px',
               borderBottom: '1px solid black',
-              width: '40%'
+              width: '40%',
+              color: 'white',
+              borderColor: 'white',
             }}
             type="text"
             placeholder="Titulo"
@@ -66,6 +68,8 @@ function createTask() {
               all: 'unset',
               padding: '10px',
               borderBottom: '1px solid black',
+              color: 'white',
+              borderColor: 'white',
               width: '40%'
             }}
             type="text"
@@ -77,9 +81,9 @@ function createTask() {
 
         <button style={{
           all: 'unset',
-          background: disabledSubmit ? '#C7F0C4' : '#019A36',
+          background: disabledSubmit ? '#F1FAEE' : '#60935D',
           padding: '10px',
-          color: 'white',
+          color: 'black',
           borderRadius: '5px',
           cursor: disabledSubmit ? 'not-allowed' : 'pointer'
         }} type="submit" disabled={ disabledSubmit } onClick={ submitTask }>
