@@ -6,6 +6,27 @@
 <hr>
 
 <details>
+  <summary>⚠️ Atenção</summary>
+    Para que essa aplicação funcione da forma correta, siga o README.md do backend primeiro
+</details>
+
+<details>
+  <summary>Primeiros passos</summary></br>
+    - Instale as dependencias do projeto
+
+> Use o comando `npm install`.
+
+- inicie a aplicação
+
+> Use o comando `npm run dev`.
+
+Esse comando irá expor a aplicação, veja qual a PORTA foi exposta pelo terminal. Agora abra a aplicação no navegador:
+
+> http://localhost:PORTA
+
+</details>
+
+<details>
   <summary>Login</summary></br>
     Ao entrar na página, será redirecionado a página de login, onde o usuário terá que entrar
     
