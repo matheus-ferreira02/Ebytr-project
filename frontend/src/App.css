@@ -1,0 +1,12 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: #1E1F1E;
+}
+
+form input {
+  all: unset;
+  border-bottom: 1px solid whitesmoke;
+  color: whitesmoke
+}

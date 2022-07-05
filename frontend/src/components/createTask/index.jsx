@@ -28,30 +28,64 @@ function createTask() {
     };
 
     const response = await requestApi(options);
-    console.log(response);
 
     if (response.error) console.log('Algo deu errado');
     else window.location.reload();
   };
 
   return (
-    <section className="createTask">
-      <form onSubmit={ (event) => event.preventDefault() }>
-        <input
-          type="text"
-          placeholder="Titulo"
-          onChange={ verifyFields }
-          ref={ titleRef }
-        />
+    <section style={{
+      padding: '10px 0',
+      width:'100%'
+    }}>
+      <form style={{
+        display: 'flex',
+        justifyContent: 'space-between',
+      }} onSubmit={ (event) => event.preventDefault() }>
+        <div style={{
+          width: '60%',
+          display: 'flex',
+          justifyContent:'space-between'
+        }}>
+          <input
+            style={{
+              all: 'unset',
+              padding: '10px',
+              borderBottom: '1px solid black',
+              width: '40%',
+              color: 'white',
+              borderColor: 'white',
+            }}
+            type="text"
+            placeholder="Titulo"
+            onChange={ verifyFields }
+            ref={ titleRef }
+          />
 
-        <input
-          type="text"
-          placeholder="Conteúdo"
-          onChange={ verifyFields }
-          ref={ contentRef }
-        />
+          <input
+            style={{
+              all: 'unset',
+              padding: '10px',
+              borderBottom: '1px solid black',
+              color: 'white',
+              borderColor: 'white',
+              width: '40%'
+            }}
+            type="text"
+            placeholder="Conteúdo"
+            onChange={ verifyFields }
+            ref={ contentRef }
+          />
+        </div>
 
-        <button type="submit" disabled={ disabledSubmit } onClick={ submitTask }>
+        <button style={{
+          all: 'unset',
+          background: disabledSubmit ? '#F1FAEE' : '#60935D',
+          padding: '10px',
+          color: 'black',
+          borderRadius: '5px',
+          cursor: disabledSubmit ? 'not-allowed' : 'pointer'
+        }} type="submit" disabled={ disabledSubmit } onClick={ submitTask }>
           Criar tarefa
         </button>
       </form>
