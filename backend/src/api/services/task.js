@@ -18,7 +18,10 @@ const create = async ({title, content, userId }) => {
   return response;
 };
 
+const deleteTask = async (id) => Task.destroy({ where: { id } });
+
 module.exports = {
   getTasksByUserId,
-  create
+  create,
+  deleteTask
 };
