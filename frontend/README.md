@@ -15,3 +15,12 @@
 
 - Caso a API esteja fora do ar, será disparado a mensagem "Erro do servidor, tente novamente mais tarde"
 </details>
+
+<details>
+  <summary>Tasks</summary></br>
+    Ao entrar na página, o usuário encontrará as tarefas pertencentes ao usuário
+    
+- O usuário pode ver e criar tarefas
+
+- Caso o usuário tente entrar na página sem o token, ele será redirecionado para o login
+</details>
